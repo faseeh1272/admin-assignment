@@ -68,4 +68,73 @@
   p a:hover {
     text-decoration: underline;
   }
+  .dashboard-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ca0f0f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #faeeee;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .tabs button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .tabs button:hover {
+    background-color: #004494;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content h2 {
+    color: #fdeaea;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f3f4f6;
+  }
+  
+  table td button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  table td button:hover {
+    background-color: #004494;
+  }
   

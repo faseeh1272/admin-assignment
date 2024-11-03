@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Signup</h2>
+    <form id="signupForm">
+      <input type="text" id="firstName" placeholder="First Name" required />
+      <input type="text" id="lastName" placeholder="Last Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <select id="role" required>
+        <option value="" disabled selected>Select Role</option>
+        <option value="Admin">Admin</option>
+        <option value="Super Admin">Super Admin</option>
+        <option value="Employ">Employ</option>
+      </select>
+      <button type="submit">Signup</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const user = {
+        id: Date.now(),
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+        role: document.getElementById("role").value
+      };
+
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      users.push(user);
+      localStorage.setItem("users", JSON.stringify(users));
+
+      alert("Signup successful!");
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>
